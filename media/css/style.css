@@ -5,9 +5,9 @@ body {
     background-image:linear-gradient(#ffcc33 100px, #fff 450px);
     background-image:-webkit-linear-gradient(#ffcc33 100px, #fff 450px);
     background-repeat: no-repeat;
-    background-color: white
+    background-color: white;
     
-    padding-top: 30px;
+    padding-top: 120px;
 }
 
 h1 {
