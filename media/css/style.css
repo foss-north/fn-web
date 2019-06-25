@@ -38,7 +38,7 @@ a:focus {
 }
 
 footer {
-    background-color: #dddddd;
+    background-color: #eaeaea;
     text-align: center;
     
     font-family: 'Roboto', sans-serif;
@@ -50,7 +50,7 @@ footer {
     padding-bottom: 20px;
     margin-top: 40px;
 
-    border-top: solid #aaaaaa 1px;
+    border-top: solid #cccccc 1px;
 }
 
 .navbar .logo {
