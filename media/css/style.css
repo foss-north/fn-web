@@ -1,6 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Armata);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+body {     
+    background-image:linear-gradient(#ffcc33 100px, #fff 450px);
+    background-image:-webkit-linear-gradient(#ffcc33 100px, #fff 450px);
+    background-repeat: no-repeat;
+    background-color: white
+    
+    padding-top: 30px;
+}
+
 h1 {
     font-family: 'Armata', serif;
     color: #333333;
@@ -26,6 +35,22 @@ a:focus {
     font-weight: bold;
     text-decoration: underline;
     text-decoration-style: dotted;
+}
+
+div.footer {
+    background-color: #bbbbbb;
+    text-align: center;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 9pt;
+    
+    display: block;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+
+    border-top: solid #999999 1px;
 }
 
 .navbar .logo {
