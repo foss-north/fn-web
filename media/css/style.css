@@ -58,5 +58,9 @@ footer {
   height: 2rem;
   margin-left: 0;
   margin-bottom: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
   border-bottom: solid black 1px;
 }
