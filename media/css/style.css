@@ -7,7 +7,7 @@ body {
     background-repeat: no-repeat;
     background-color: white;
     
-    padding-top: 120px;
+    padding-top: 4rem;
 }
 
 h1 {
@@ -16,6 +16,7 @@ h1 {
     font-size: 30pt;
     text-align: center;
 
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
