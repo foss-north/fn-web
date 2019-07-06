@@ -10,6 +10,13 @@ body {
     padding-top: 4rem;
 }
 
+span.header {
+    font-family: 'Armata', serif;
+    color: #333333;
+    font-size: 36pt;
+    text-align: center;
+}
+
 h1 {
     font-family: 'Armata', serif;
     color: #333333;
