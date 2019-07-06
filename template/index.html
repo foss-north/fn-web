@@ -3,14 +3,14 @@
 {%block maincontent%}
 <div class="container">
 <p>
-    <img src="images/logo-black.png" width="20%" />&nbsp;<span class="header">foss-north and friends</span>
+    <img src="/media/local/img/logo-black.png" width="20%" />&nbsp;<span class="header">foss-north and friends</span>
 </p>
 
 <h1>Upcoming Events</h1>
 
-<p>These are our currently scheduled events:</p>
-
 {%if events%}
+    <p>These are our currently scheduled events:</p>
+    
     {%for event in events%}
         <h2>{{event.conferencename}}</h2>
         <p>
@@ -26,6 +26,8 @@
             <p><a href="/events/{{event.urlname}}/callforsponsors/">Call for sponsors is open</a>.</p>
         {%endif%}
     {%endfor%}
+{%else%}
+    <p>There are currently no scheduled events.</p>
 {%endif%}
 
 <p>Make sure to visit <a href="https://foss-gbg.se/">foss-gbg</a> and <a href="https://www.foss-sthlm.se/">foss-sthlm</a> for local meetups.</p>
