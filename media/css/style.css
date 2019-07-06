@@ -27,6 +27,16 @@ h1 {
     margin-bottom: 30px;
 }
 
+h1 {
+    font-family: 'Armata', serif;
+    color: #333333;
+    font-size: 30pt;
+    text-align: center;
+
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+
 p {
     text-align: center;
     font-family: 'Roboto', sans-serif;
