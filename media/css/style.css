@@ -37,6 +37,16 @@ h2 {
     margin-bottom: 30px;
 }
 
+h3 {
+    font-family: 'Armata', serif;
+    color: #333333;
+    font-size: 24pt;
+    text-align: center;
+
+    margin-top: 16px;
+    margin-bottom: 30px;
+}
+
 div.bodybreak {
     background-color: #ffcc33;
     display: block;
