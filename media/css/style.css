@@ -1,14 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Armata);
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
-
-body {     
-    background-image:linear-gradient(#ffcc33 100px, #fff 450px);
-    background-image:-webkit-linear-gradient(#ffcc33 100px, #fff 450px);
-    background-repeat: no-repeat;
-    background-color: white;
-    
-    padding-top: 4rem;
-}
+@import url('body.css');
 
 span.header {
     font-family: 'Armata', serif;
