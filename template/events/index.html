@@ -34,13 +34,13 @@
             {%endif%}
             <p><a href="{{event.confurl}}">View website</a>
             {%if event.active%}
-                &nbsp;|&nbsp;<a href="/events/{{event.urlname}}/register/">Register</a>
+                | <a href="/events/{{event.urlname}}/register/">Register</a>
             {%endif%}
             {%if event.callforpapersopen%}
-                &nbsp;|&nbsp;<a href="/events/{{event.urlname}}/callforpapers/">Submit presentation</a>
+                | <a href="/events/{{event.urlname}}/callforpapers/">Submit presentation</a>
             {%endif%}
             {%if event.callforsponsorsopen%}
-                &nbsp;|&nbsp;<a href="/events/sponsor/signup/{{event.urlname}}/">Sign up</a>
+                | <a href="/events/sponsor/signup/{{event.urlname}}/">Sign up</a>
             {%endif%}
             </p>
         {%endfor%}
