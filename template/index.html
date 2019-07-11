@@ -2,48 +2,48 @@
 {%block title%}Welcome{%endblock%}
 {%block maincontent%}
 <div class="container">
-<p>
+<p class="text-center">
     <img src="/media/local/img/logo-black.png" width="20%" />&nbsp;<span class="header">foss-north and friends</span>
 </p>
 
-<h1>Upcoming Events</h1>
+<h1 class="text-center">Upcoming Events</h1>
 
 {%if events%}
-    <p>These are our currently scheduled events:</p>
+    <p class="text-center">These are our currently scheduled events:</p>
     
     {%for event in events%}
-        <h2>{{event.conferencename}}</h2>
-        <p>
+        <h3 class="text-center">{{event.conferencename}}</h3>
+        <p class="text-center">
             <a href="/events/{{event.urlname}}/">{{event.conferencename}}</a> takes place at <strong>{{event.location}}</strong> on <strong>{{event.conferencedatestr}}</strong>.
         </p>
         {%if event.active%}
-            <p><a href="/events/{{event.urlname}}/register/">Get your tickets</a>.</p>
+            <p class="text-center"><a href="/events/{{event.urlname}}/register/">Get your tickets</a>.</p>
         {%endif%}
         {%if event.callforpapersopen%}
-            <p><a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>.</p>
+            <p class="text-center"><a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>.</p>
         {%endif%}
         {%if event.callforsponsorsopen%}
-            <p><a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>.</p>
+            <p class="text-center"><a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>.</p>
         {%endif%}
     {%endfor%}
 {%else%}
-    <p>There are currently no scheduled events.</p>
+    <p class="text-center">There are currently no scheduled events.</p>
 {%endif%}
 
-<h2>Meetups</h2>
+<h3 class="text-center">Meetups</h2>
 
-<p>Make sure to visit <a href="https://foss-gbg.se/">foss-gbg</a> and <a href="https://www.foss-sthlm.se/">foss-sthlm</a> for local meetups.</p>
+<p class="text-center">Make sure to visit <a href="https://foss-gbg.se/">foss-gbg</a> and <a href="https://www.foss-sthlm.se/">foss-sthlm</a> for local meetups.</p>
 
 
 <div class="bodybreak">&nbsp;</div>
-<h1>Past Events</h1>
+<h1 class="text-center">Past Events</h1>
 
-<p>The foss-north conference is an annual conference about all free and open source.</p>
-<p>The following links lead to our archived sites from past events:</p>
+<p class="text-center">The foss-north conference is an annual conference about all free and open source.</p>
+<p class="text-center">The following links lead to our archived sites from past events:</p>
 
-<p><a href="https://foss-north.se/2016/">foss-north 2016</a></p>
-<p><a href="https://foss-north.se/2017/">foss-north 2017</a> - <a href="https://conf.tube/video-channels/foss_north_2017/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=Euv_vO6lpGA&list=PL8Xzb2qPbjDHRVqq3WTFuWzRU0HtlOp4D">YouTube videos</a></p>
-<p><a href="https://foss-north.se/2018/">foss-north 2018</a> - <a href="https://conf.tube/video-channels/foss_north_2018/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=SSrgi4iHGbs&list=PL8Xzb2qPbjDEpMTPYQy4QrnBbes2j-b9S">YouTube videos</a></p>
-<p><a href="https://foss-north.se/2019/">foss-north 2019</a> - <a href="https://conf.tube/video-channels/foss_north_2019/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=7n6IBdh2VmQ&list=PL8Xzb2qPbjDFWaffHT99OaYQYaWBkdswh">YouTube videos</a></p>
+<p class="text-center"><a href="https://foss-north.se/2019/">foss-north 2019</a> - <a href="https://conf.tube/video-channels/foss_north_2019/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=7n6IBdh2VmQ&list=PL8Xzb2qPbjDFWaffHT99OaYQYaWBkdswh">YouTube videos</a></p>
+<p class="text-center"><a href="https://foss-north.se/2018/">foss-north 2018</a> - <a href="https://conf.tube/video-channels/foss_north_2018/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=SSrgi4iHGbs&list=PL8Xzb2qPbjDEpMTPYQy4QrnBbes2j-b9S">YouTube videos</a></p>
+<p class="text-center"><a href="https://foss-north.se/2017/">foss-north 2017</a> - <a href="https://conf.tube/video-channels/foss_north_2017/videos">conf.tube videos</a> - <a href="https://www.youtube.com/watch?v=Euv_vO6lpGA&list=PL8Xzb2qPbjDHRVqq3WTFuWzRU0HtlOp4D">YouTube videos</a></p>
+<p class="text-center"><a href="https://foss-north.se/2016/">foss-north 2016</a></p>
 
 {%endblock%}
