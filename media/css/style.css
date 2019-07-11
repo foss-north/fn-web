@@ -43,6 +43,16 @@ h3 {
     font-size: 24pt;
     text-align: center;
 
+    margin-top: 18px;
+    margin-bottom: 30px;
+}
+
+h4 {
+    font-family: 'Armata', serif;
+    color: #333333;
+    font-size: 24pt;
+    text-align: center;
+
     margin-top: 16px;
     margin-bottom: 30px;
 }
@@ -65,6 +75,13 @@ div.bodybreak {
 }
 
 p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    margin-bottom: 20px;
+}
+
+ul {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
