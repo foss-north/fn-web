@@ -13,3 +13,6 @@ INVOICE_SENDER_EMAIL="johan@foss-gbg.se"
 SCHEDULED_JOBS_EMAIL="johan@foss-gbg.se"
 
 ENABLE_OAUTH_AUTH=True
+
+INVOICE_PDF_BUILDER="fossnorthinvoice.FOSSNorthInvoice"
+REFUND_PDF_BUILDER="fossnorthinvoice.FOSSNorthRefund"
