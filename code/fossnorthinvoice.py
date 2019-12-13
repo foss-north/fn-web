@@ -12,7 +12,7 @@ Web: https://www.foss-north.se
 """
     sendertext = """Your contact:
 Johan Thelin
-Email: info@@foss-north.se
+Email: info@foss-north.se
 """
 
     bankinfotext = """Bankgiro: 5063-6299
