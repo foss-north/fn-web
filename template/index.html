@@ -6,6 +6,10 @@
     <img src="/media/local/img/logo-black.png" width="20%" />&nbsp;<span class="header">foss-north and friends</span>
 </p>
 
+<p>
+foss-north is a free / open source conference covering both software and hardware from the technical perspective. We provide a meeting place for the Nordic foss communities and will bring together great speakers with great audiences. Please visit our events to learn more about what we are doing!
+</p>
+
 <h1 class="text-center">Upcoming Events</h1>
 
 {%if events%}
@@ -14,7 +18,7 @@
     {%for event in events%}
         <h3 class="text-center">{{event.conferencename}}</h3>
         <p class="text-center">
-            <a href="/events/{{event.urlname}}/">{{event.conferencename}}</a> takes place at <strong>{{event.location}}</strong> on <strong>{{event.conferencedatestr}}</strong>.
+            <a href="{{event.confurl}}">{{event.conferencename}}</a> takes place at <strong>{{event.location}}</strong> on <strong>{{event.conferencedatestr}}</strong>.
         </p>
         {%if event.active%}
             <p class="text-center"><a href="/events/{{event.urlname}}/register/">Get your tickets</a>.</p>
