@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+{%block maincontent%}
+<h1>Log in </h1>
+<p>Some of our services requires you to log in (buying tickets, submitting papers, etc). Please use one of the oauth providers listed below to log in to foss-north.</p>
+{%if oauth_providers%}
+{%for p,d in oauth_providers%}
+<p><a href="/accounts/login/{{p}}/?next={{next}}"><img src="/media/img/misc/btn_login_{{p}}.png" alt="Sign in with {{p|capfirst}}" /></a></p>
+{%endfor%}
+{%else%}
+<p>No authentication providers configured.</p>
+{%endif%}
+
+{%endblock%}
