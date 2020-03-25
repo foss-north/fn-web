@@ -76,12 +76,10 @@ ul {
 a,
 a:hover,
 a:focus {
-    color: #333333;
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
     font-weight: bold;
     text-decoration: underline;
-    text-decoration-style: dotted;
 }
 
 footer {
@@ -109,4 +107,8 @@ footer {
 .navbar {
   margin-bottom: 0;
   border-bottom: solid black 1px;
+}
+
+.nav-item > a {
+  color: black;
 }
