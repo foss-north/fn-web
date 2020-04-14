@@ -16,3 +16,6 @@ ENABLE_OAUTH_AUTH=True
 
 INVOICE_PDF_BUILDER="fossnorthinvoice.FOSSNorthInvoice"
 REFUND_PDF_BUILDER="fossnorthinvoice.FOSSNorthRefund"
+
+TIME_ZONE="Europe/Stockholm"
+
