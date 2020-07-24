@@ -52,14 +52,10 @@
     {%else%}
         <p>There are currently no scheduled events.</p>
     {%endif%}
-    <h2>foss-north 2020 take II</h2>
-    <p>
-        <a href="https://foss-north.se/2020ii/">foss-north 2020 take II</a> takes place at <strong>Gothenburg</strong> on <strong>2020-11-01 - 2020-11-04</strong>.
-    </p>
     
     <h1>News</h1>
 
-    {% if news %}
+    {% if news|length > 0 %}
     <div class="row">
         {% for n in news %}
             {% if loop.index < 3 %}
