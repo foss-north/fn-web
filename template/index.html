@@ -55,13 +55,14 @@
     
     <h1>News</h1>
 
-    {% if news|length > 0 %}
     <div class="row">
+    {% if news %}
         {% for n in news %}
-            {% if loop.index < 3 %}
+            {% if forloop.counter < 3 %}
                 <div class="col-md-4">
                     <h2>{{ n.title }}</h2>
-                    <p>{{ n.summaryhtml|safe|truncatewords_html:100 }}</p>
+		    <p class="details italic">{{ n.datetime|date:"Y-m-d"}}</p>
+                    <p>{{ n.summaryhtml|safe|truncatewords_html:50 }}</p>
                     <p><a href="{{n.itemlink}}">Read more...</a></p>
                 </div>
             {% endif %}
@@ -78,7 +79,7 @@
 {% endblock %}
 
 {% block rightcontents %}
-    <img src="logo-black.png" width="60%" class="rightlogo">
+    <img src="/media/local/img/logo-black.png" width="60%" class="rightlogo">
     <h1>Latest Tweets</h1>
     <a class="twitter-timeline" data-theme="light" data-height="800" href="https://twitter.com/fossnorth?ref_src=twsrc%5Etfw">Tweets by fossnorth</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 {% endblock %}
