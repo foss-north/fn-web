@@ -61,7 +61,7 @@
             {% if forloop.counter < 3 %}
                 <div class="col-md-4">
                     <h2>{{ n.title }}</h2>
-		    <p class="details italic">{{ n.datetime|date:"Y-m-d"}}</p>
+		    <div class="details italic">{{ n.datetime|date:"Y-m-d"}}</div>
                     <p>{{ n.summaryhtml|safe|truncatewords_html:50 }}</p>
                     <p><a href="{{n.itemlink}}">Read more...</a></p>
                 </div>
