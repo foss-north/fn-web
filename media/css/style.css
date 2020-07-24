@@ -61,6 +61,17 @@ div.bodybreak {
     margin-bottom: 60px;
 }
 
+div.details {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+div.italic {
+    font-style: italic;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
