@@ -118,3 +118,9 @@ footer {
   margin-bottom: 0;
   border-bottom: solid black 1px;
 }
+
+@media screen and (max-width: 1200px) {
+    #sidenav h1, #sidenav h2, #sidenav ul {
+        display: none;
+    }
+}
