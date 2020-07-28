@@ -1,41 +1,86 @@
 {%extends "base.html" %}
 {%block title%}Welcome{%endblock%}
-{%block maincontent%}
-<div class="container">
-<p class="text-center">
-    <img src="/media/local/img/logo-black.png" width="20%" />&nbsp;<span class="header">foss-north and friends</span>
-</p>
+{% block leftcontent %}
+    <h1>Events</h1>
+    {%if events%}
+    <ul>
+        {%for event in events%}
+            <li><a href="/events/{{event.urlname}}/">{{event.conferencename}}</a></li>
+        {%endfor%}
+    </ul>
+    {%endif%}
 
-<h1 class="text-center">Upcoming Events</h1>
+    <h2>Past</h2>
+    <ul>
+        <li><a href="/2020/">foss-north 2020</a></li>
+        <li><a href="/2019/">foss-north 2019</a></li>
+        <li><a href="/2018/">foss-north 2018</a></li>
+        <li><a href="/events/">More...</a></li>
+    </ul>
+    <h1>Meetups</h1>
+    <ul>
+        <li><a href="https://foss-gbg.se/">foss-gbg</a></li>
+        <li><a href="https://www.foss-sthlm.se/">foss-sthlm</a></li>
+    </ul>
+{% endblock %}
 
-{%if events%}
-    <p class="text-center">These are our currently scheduled events:</p>
+{% block centercontent %}
+    <h1 class="superheading">
+        Welcome to foss-north
+    </h1>
     
-    {%for event in events%}
-        <h3 class="text-center">{{event.conferencename}}</h3>
-        <p class="text-center">
-            <a href="/events/{{event.urlname}}/">{{event.conferencename}}</a> takes place at <strong>{{event.location}}</strong> on <strong>{{event.conferencedatestr}}</strong>.
-        </p>
-        {%if event.active%}
-            <p class="text-center"><a href="/events/{{event.urlname}}/register/">Get your tickets</a>.</p>
-        {%endif%}
-        {%if event.callforpapersopen%}
-            <p class="text-center"><a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>.</p>
-        {%endif%}
-        {%if event.callforsponsorsopen%}
-            <p class="text-center"><a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>.</p>
-        {%endif%}
-    {%endfor%}
-{%else%}
-    <p class="text-center">There are currently no scheduled events.</p>
-{%endif%}
+    <p>
+        foss-north is a free / open source conference covering both software and hardware from the technical perspective. We provide a meeting place for the Nordic foss communities and will bring together great speakers with great audiences. Please visit our events to learn more about what we are doing!
+    </p>
 
-<h3 class="text-center">Meetups</h3>
+    <h1>Next Event</h1>
+                
+    {%if events%}
+        {%for event in events%}
+            <h2>{{event.conferencename}}</h2>
+            <p><a href="/events/{{event.urlname}}/">{{event.conferencename}}</a> takes place at <strong>{{event.location}}</strong> on <strong>{{event.conferencedatestr}}</strong>.</p>
+            {%if event.active%}
+            <p><a href="/events/{{event.urlname}}/register/">Get your tickets</a>.</p>
+            {%endif%}
+            {%if event.callforpapersopen%}
+            <p><a href="/events/{{event.urlname}}/callforpapers/">Call for papers is open</a>.</p>
+            {%endif%}
+            {%if event.callforsponsorsopen%}
+            <p><a href="/events/sponsor/signup/{{event.urlname}}/">Call for sponsors is open</a>.</p>
+            {%endif%}
+        {%endfor%}
+    {%else%}
+        <p>There are currently no scheduled events.</p>
+    {%endif%}
+    
+    <h1>News</h1>
 
-<p class="text-center">Make sure to visit <a href="https://foss-gbg.se/">foss-gbg</a> and <a href="https://www.foss-sthlm.se/">foss-sthlm</a> for local meetups.</p>
+    <div class="row">
+    {% if news %}
+        {% for n in news %}
+            {% if forloop.counter < 3 %}
+                <div class="col-md-4">
+                    <h2>{{ n.title }}</h2>
+		    <div class="details italic">{{ n.datetime|date:"Y-m-d"}}</div>
+                    <p>{{ n.summaryhtml|safe|truncatewords_html:50 }}</p>
+                    <p><a href="{{n.itemlink}}">Read more...</a></p>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% else %}
+        <p>Coming soon...</p>
+    {% endif %}
+    </div>
 
-<h3 class="text-center">Past Events</h3>
+    <h1>Next Event</h1>
 
-<p class="text-center">You can find the web sites and video recordings of our past events in the <a href="/events/">events section</a>.</p>
+    <p>Make sure not to miss our other events such as meetups in <a href="https://www.foss-sthlm.se/">Stockholm</a> and <a href="https://foss-gbg.se/">Gothenburg</a>, as well as our <a href="/pod/">pod</a>.
+    <p>You can find the web sites and video recordings of our past events in the <a href="/events/">events section</a>.</p>
+{% endblock %}
 
-{%endblock%}
+{% block rightcontent %}
+    <img src="/media/local/img/logo-black.png" width="60%" class="rightlogo">
+    <h1>Latest Tweets</h1>
+    <a class="twitter-timeline" data-theme="light" data-height="800" href="https://twitter.com/fossnorth?ref_src=twsrc%5Etfw">Tweets by fossnorth</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+{% endblock %}
+
