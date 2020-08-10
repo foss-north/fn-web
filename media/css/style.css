@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Armata);
+@import url('https://fonts.googleapis.com/css?family=Armata|Open+Sans:300');
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 @import url('body.css');
 
@@ -61,25 +61,29 @@ div.bodybreak {
     margin-bottom: 60px;
 }
 
+div.details {
+    font-family: 'Roboto', sans-serif;
+    font-size: 10pt;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+div.italic {
+    font-style: italic;
+}
+
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
     margin-bottom: 20px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 ul {
     font-family: 'Roboto', sans-serif;
     font-size: 14pt;
     margin-bottom: 20px;
-}
-
-a,
-a:hover,
-a:focus {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14pt;
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 footer {
@@ -110,5 +114,15 @@ footer {
 }
 
 .nav-item > a {
+    font-family: 'Armata', serif;
+}
+
+.nav-item > a {
   color: black;
+}
+
+@media screen and (max-width: 1200px) {
+    #sidenav h1, #sidenav h2, #sidenav ul {
+        display: none;
+    }
 }
